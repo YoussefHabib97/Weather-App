@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive Weather App</title>
+
     <!-- FontAwesome CDN -->
     <link
       rel="stylesheet"
@@ -21,15 +22,22 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.min.css" />
   </head>
   <body>
     <main>
-      <h1>Responsive Weather App Powered by the Open Weather A P I</h1>
+      <h1 class="offscreen">
+        Responsive Weather App Powered by the Open Weather A P I
+      </h1>
 
       <!-- Search Bar Section -->
       <section id="searchBar" class="searchBar">
         <form id="searchBar__form" class="searchBar__form" role="search">
-          <label for="searchBar__text">Enter a new location</label>
+          <label for="searchBar__text" class="offscreen"
+            >Enter a new location</label
+          >
           <input
             id="searchBar__text"
             class="searchBar__text"
@@ -41,12 +49,12 @@
           />
           <button
             id="searchBar__button"
-            class="searchBar__button"
+            class="searchBar__button button"
             title="Submit Location"
             aria-label="Enter Zip Code or City, State and Country to retrieve weather conditions"
           >
             <i class="fa-solid fa-magnifying-glass"></i>
-            <i class="fas fa-sync fa-spin"></i>
+            <i class="fas fa-sync fa-spin none"></i>
           </button>
         </form>
       </section>
@@ -83,7 +91,7 @@
           aria-label="Get the current weather conditions for your current location"
         >
           <i class="fas fa-map-marker-alt"></i>
-          <i class="fas fa-sync fa-spin"></i>
+          <i class="fas fa-sync fa-spin none"></i>
         </button>
 
         <!-- Home Button -->
@@ -94,7 +102,7 @@
           aria-label="Get the current weather conditions for your home location"
         >
           <i class="fas fa-home"></i>
-          <i class="fas fa-sync fa-spin"></i>
+          <i class="fas fa-sync fa-spin none"></i>
         </button>
 
         <!-- Save Location Button -->
@@ -105,7 +113,7 @@
           aria-label="Save the current location as your home location"
         >
           <i class="fas fa-save"></i>
-          <i class="fas fa-sync fa-spin"></i>
+          <i class="fas fa-sync fa-spin none"></i>
         </button>
 
         <!-- Toggle Units Button -->
@@ -116,7 +124,7 @@
           aria-label="Toggle between Metric and Imperial measurement units"
         >
           <i class="fas fa-chart-bar"></i>
-          <i class="fas fa-sync fa-spin"></i>
+          <i class="fas fa-sync fa-spin none"></i>
         </button>
 
         <!-- Refresh Button -->
@@ -127,7 +135,7 @@
           aria-label="Refresh the current weather conditions"
         >
           <i class="fas fa-sync-alt"></i>
-          <i class="fas fa-sync fa-spin"></i>
+          <i class="fas fa-sync fa-spin none"></i>
         </button>
       </nav>
       <hr />
@@ -139,7 +147,7 @@
         role="region"
         aria-labelledby="dailyForecast__title"
       >
-        <h2 id="dailyForecast__title" class="dailyForecast__title">
+        <h2 id="dailyForecast__title" class="dailyForecast__title offscreen">
           Six Day Forecast
         </h2>
         <div id="dailyForecast__contents" class="dailyForecast__contents"></div>

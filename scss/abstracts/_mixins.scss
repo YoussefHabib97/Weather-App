@@ -1,0 +1,24 @@
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin mq($width) {
+  @media only screen and (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin mqh($height) {
+  @media only screen and (min-height: $height) {
+    @content;
+  }
+}
+
+@mixin mqMaxWMinH($width, $height) {
+  // iPad Pro w: 1024px & iPhone Plus 6/7/8 h: 736px
+  @media only screen and (max-width: $width) and (min-height: $height) {
+    @content;
+  }
+}
